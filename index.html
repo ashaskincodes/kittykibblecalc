@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div id="grandparent">
+            <div id="parent">
+                <div id="weightSection">
+                    <label for="weight"></label>
+                    <select id="weight">
+                    </select>
+                    <div id="weighttype">
+                        <input type="radio" id="kg" name="weighttype" onchange="setWeightType()" value="1" checked>
+                        <label for="kg">Kg</label>
+                        <input type="radio" id="lb" name="weighttype" onchange="setWeightType()" value="2.2046">
+                        <label for="lb">lb</label>
+                        <script src="scripts/setWeightType.js"></script>
+                    </div>
+                </div>
+                <div id="multiplierSection">
+                    <label for="age">How old is your kitty?</label>
+                    <select id="age">
+                        <option value="2.5">Kitten, 0-4 months</option>
+                        <option value="2">Kitten, 4-12 months</option>
+                        <option value="1">Adult</option>
+                    </select>    
+                    <label for="neuter">Is your kitty neutered?</label>
+                    <select id="neuter">
+                        <option value="1.2">Yes</option>
+                        <option value="1.4">No</option>
+                    </select>
+                    <label for="health">How's your kitty's health?</label>
+                    <select id="health">
+                        <option value="1.8">Underweight</option>
+                        <option value="0.8">Overweight</option>
+                        <option value="1">About right</option>
+                    </select>
+                    <script src="scripts/setAge.js"></script>
+                    <script src="scripts/setNeuter.js"></script>
+                    <script src="scripts/setHealth.js"></script>
+                    <script src="scripts/setMultiplier.js"></script>
+                </div>
+                <button type="button" onclick="setAge(), setNeuter(), setHealth(), setMultiplier(), calcRER(), calcCalories(), confirmResults()">Calculate</button>
+                <script src="scripts/calcRER.js"></script>
+                <script src="scripts/calcCalories.js"></script>
+                <script src="scripts/displayResults.js"></script>
+                <script src="scripts/dropdowns.js"></script>
+            </div>
+        </div>
+        <p>Please note that I built this website so I could practise using JavaScript to juggle calculations with lots of options and numbers. DO NOT use this information to manage your kitty's diet - a dialogue with your vet is the only way to ensure your pets are getting the correct quantities of food and nutritional breakdown to ensure a healthy, safe diet and a long, happy life.</p>
+    </body>
+</html>
