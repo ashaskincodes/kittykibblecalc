@@ -49,11 +49,21 @@ body {
     width: 
 }
 
+@keyframes appear {
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
 #phonegridlogo {
     height: 20vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px 50px 50px 50px;
+    animation: appear 3s forwards;
 }
 
 .shapes {
@@ -65,7 +75,7 @@ body {
 #shape1 {
     grid-row-start: 1;
     grid-row-end: 2;
-    height: 14px;
+    height: 10px;
     width: 90%;
     background-color: #950952;
 }
@@ -73,7 +83,7 @@ body {
 #shape2 {
     grid-row-start: 2;
     grid-row-end: 3;
-    height: 14px;
+    height: 10px;
     width: 80%;
     background-color: #3C7A89;
 }
@@ -81,7 +91,7 @@ body {
 #shape3 {
     grid-row-start: 3;
     grid-row-end: 4;
-    height: 14px;
+    height: 10px;
     width: 90%;
     background-color: #D5A021;
 }
@@ -92,7 +102,7 @@ body {
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 5;
-    height: 3px;
+    height: 5px;
     width: 100%;
     align-self: center;
 }
@@ -126,4 +136,6 @@ h1 {
 
 #parent {
     margin-top: 60px;
+    text-align: center;
+    font-size: 30px;
 }
