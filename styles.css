@@ -63,7 +63,23 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px 50px 50px 50px;
+    overflow-x: hidden;
+}
+
+#shape1, #kitty {
+    animation: appear 2s forwards;
+}
+
+#shape2, #kibble {
+    animation: appear 2.5s forwards;
+}
+
+#shape3, #calc {
     animation: appear 3s forwards;
+}
+
+#shape4 {
+    animation: appear 5s forwards;
 }
 
 .shapes {
