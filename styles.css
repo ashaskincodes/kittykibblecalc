@@ -66,22 +66,6 @@ body {
     overflow-x: hidden;
 }
 
-#shape1, #kitty {
-    animation: appear 2s forwards;
-}
-
-#shape2, #kibble {
-    animation: appear 2.5s forwards;
-}
-
-#shape3, #calc {
-    animation: appear 3s forwards;
-}
-
-#shape4 {
-    animation: appear 4s forwards;
-}
-
 .shapes {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -112,15 +96,16 @@ body {
     background-color: #D5A021;
 }
 
-#shape4 {
-    background-color: black;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    height: 10px;
-    width: 100%;
-    align-self: center;
+#shape1, #kitty {
+    animation: appear 2s forwards;
+}
+
+#shape2, #kibble {
+    animation: appear 2.5s forwards;
+}
+
+#shape3, #calc {
+    animation: appear 3s forwards;
 }
 
 h1 {
