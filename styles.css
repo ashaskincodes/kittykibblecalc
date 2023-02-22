@@ -51,7 +51,7 @@ body {
 
 @keyframes appear {
     from {
-        transform: translateX(-500px);
+        transform: translateX(500px);
     }
     to {
         transform: translateX(0);
@@ -59,10 +59,9 @@ body {
 }
 
 #phonegridlogo {
-    height: 20vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 50px 50px 50px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     overflow-x: hidden;
 }
 
@@ -70,6 +69,8 @@ body {
     grid-column-start: 1;
     grid-column-end: 3;
     align-self: center;
+    border-right: 1px white solid;
+    border-radius: 0px 10px 10px 0px;
 }
 
 #shape1 {
@@ -96,6 +97,19 @@ body {
     background-color: #D5A021;
 }
 
+#shape4 {
+    background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    height: 5px;
+    align-self: center;
+    border-right: 1px white solid;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 20px;
+}
+
 #shape1, #kitty {
     animation: appear 2s forwards;
 }
@@ -108,6 +122,10 @@ body {
     animation: appear 3s forwards;
 }
 
+#shape4 {
+    animation: appear 3.5s forwards;
+}
+
 h1 {
     grid-column-start: 3;
     grid-column-end: 4;
@@ -116,8 +134,8 @@ h1 {
     font-family: 'Averia Sans Libre', cursive;
     font-weight: 400;
     justify-self: end;
-    align-self: end;
-    margin-right: 34px;
+    align-self: center;
+    margin-right: 20px;
 }
 
 #kitty {
@@ -135,8 +153,9 @@ h1 {
     grid-row-end: 4;
 }
 
-#parent {
-    margin-top: 60px;
-    text-align: center;
-    font-size: 30px;
+#multipliersection {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 20%;
 }
