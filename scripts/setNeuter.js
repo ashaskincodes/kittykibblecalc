@@ -4,6 +4,6 @@ function setNeuter() {
 if(ageMultiplier >= 2.5){
     neuterMultiplier = 1;
 } else {
-    neuterMultiplier =  document.getElementById('neuter').value;
+    neuterMultiplier =  document.getElementById('neuteranswer').value;
 }
 }
