@@ -20,16 +20,6 @@
             </div>
             <div id="parent">
                 <div id="multipliersection">
-                    <label for="weight" id="weightquestion">How much does your kitty weigh?</label>
-                    <select id="weightanswer">
-                    </select>
-                    <div id="weighttype">
-                        <input type="radio" id="kg" name="weighttype" onchange="setWeightType()" value="1" checked>
-                        <label for="kg" id="kglabel">kg</label>
-                        <input type="radio" id="lb" name="weighttype" onchange="setWeightType()" value="2.2046">
-                        <label for="lb" id="lblabel">lb</label>
-                        <script src="scripts/setWeightType.js"></script>
-                    </div>
                     <label for="age" id="agequestion">How old is your kitty?</label>
                     <select id="ageanswer">
                         <option value="2.5">Kitten, 0-4 months</option>
@@ -47,6 +37,16 @@
                         <option value="0.8">Overweight</option>
                         <option value="1">About right</option>
                     </select>
+                    <label for="weight" id="weightquestion">How much does your kitty weigh?</label>
+                    <select id="weightanswer">
+                    </select>
+                    <div id="weighttype">
+                        <input type="radio" id="kg" name="weighttype" onchange="setWeightType()" value="1" checked>
+                        <label for="kg" id="kglabel">kg</label>
+                        <input type="radio" id="lb" name="weighttype" onchange="setWeightType()" value="2.2046">
+                        <label for="lb" id="lblabel">lb</label>
+                        <script src="scripts/setWeightType.js"></script>
+                    </div>
                     <script src="scripts/setAge.js"></script>
                     <script src="scripts/setNeuter.js"></script>
                     <script src="scripts/setHealth.js"></script>
@@ -56,7 +56,9 @@
                     <script src="scripts/displayResults.js"></script>
                     <script src="scripts/dropdowns.js"></script>
                     </div>
-                    <button type="button" id="calculatebutton" onclick="setAge(), setNeuter(), setHealth(), setMultiplier(), calcRER(), calcCalories(), confirmResults()">Calculate</button>
+                    <div id="calculatebutton">
+                        <button type="button" id="button" onclick="setAge(), setNeuter(), setHealth(), setMultiplier(), calcRER(), calcCalories(), confirmResults()">Calculate</button>
+                    </div>
                 </div>
             </div>
         </div>
