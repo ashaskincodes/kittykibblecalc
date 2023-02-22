@@ -46,7 +46,7 @@ table {
 }
 
 body {
-    width: 
+    width: 100%;
 }
 
 @keyframes appear {
@@ -79,7 +79,7 @@ body {
 }
 
 #shape4 {
-    animation: appear 5s forwards;
+    animation: appear 4s forwards;
 }
 
 .shapes {
@@ -118,7 +118,7 @@ body {
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 5;
-    height: 5px;
+    height: 10px;
     width: 100%;
     align-self: center;
 }
