@@ -269,7 +269,7 @@ select {
     padding-right: 10%;
 }
 
-#disclaimer {
+.disclaimer {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -286,6 +286,7 @@ select {
 
 #disclaimertext {
     text-align: center;
+    font-weight: bold;
     background-color: #950952;
     color: white;
     border-radius: 25px;
@@ -301,7 +302,8 @@ select {
     font-size: 20px;
     color: white;
     background-color: #3C7A89;
-    border-radius: 5px;
+    border: 5px solid white;
+    border-radius: 25px;
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 10%;
@@ -334,6 +336,21 @@ select {
     to {
         transform: scale(1, 1);
     }
+}
+
+#removedisclaimer {
+    animation: disappear 1s forwards;
+}
+
+@keyframes disappear {
+    from {
+        display: block;
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(0, 0);
+        display: none;
+}
 }
 
 .formappear {
