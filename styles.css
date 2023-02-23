@@ -1,3 +1,5 @@
+/* CSS Reset */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -17,7 +19,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -41,8 +43,14 @@ table {
 	border-spacing: 0;
 }
 
+/* end of reset */
+
 body {
     width: 100%;
+}
+
+#grandparent {
+    overflow: hidden;
 }
 
 #background {
@@ -51,30 +59,8 @@ body {
     width: 100%;
     top: 140px;
     opacity: 0%;
-    animation: backgroundappear 5s forwards;
+    animation: fadein 5s forwards;
     animation-delay: 3s;
-}
-
-@keyframes backgroundappear {
-    from {
-        opacity: 0%;
-    }
-    to {
-        opacity: 100%;
-    }
-}
-
-#grandparent {
-    overflow-x: hidden;
-}
-
-@keyframes appear {
-    from {
-        transform: translateX(500px);
-    }
-    to {
-        transform: translateX(0);
-    }
 }
 
 #phonegridlogo {
@@ -84,89 +70,91 @@ body {
     overflow-x: hidden;
 }
 
+#shape1, .disclaimer, #disclaimertext, #answer {
+    background-color: #950952;
+}
+
 .shapes {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: 1 / 3;
     align-self: center;
     border-right: 1px white solid;
     border-radius: 0px 10px 10px 0px;
 }
 
-#shape1 {
-    grid-row-start: 1;
-    grid-row-end: 2;
+#shape1, #shape2, #shape3 {
     height: 10px;
-    width: 90%;
-    background-color: #950952;
+}
+
+#shape1, #shape3 {
+    width: 100%;
+}
+
+#shape1 {
+    grid-row: 1 / 2;
 }
 
 #shape2 {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    height: 10px;
-    width: 80%;
+    grid-row: 2 / 3;
+    width: 90%;
     background-color: #3C7A89;
 }
 
 #shape3 {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    height: 10px;
-    width: 90%;
+    grid-row: 3 / 4;
     background-color: #D5A021;
 }
 
 #shape4 {
     background-color: black;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
     height: 5px;
     align-self: center;
 }
 
 #shape1, #kitty {
-    animation: appear 2s forwards;
+    animation: slideleft 2s forwards;
 }
 
 #shape2, #kibble {
-    animation: appear 2.5s forwards;
+    animation: slideleft 2.5s forwards;
 }
 
 #shape3, #calc {
-    animation: appear 3s forwards;
+    animation: slideleft 3s forwards;
 }
 
 #shape4 {
-    animation: appear 3.5s forwards;
+    animation: slideleft 3.5s forwards;
 }
 
 h1 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    font-size: 40px;
-    color: black;
+    grid-column: 3 / 4;
     font-family: 'Averia Sans Libre', cursive;
+    font-size: 40px;
     font-weight: 400;
+    color: black;
     justify-self: end;
     align-self: center;
     margin-right: 20px;
 }
 
+/* set font for all */
+
+select, #multipliersection, #button, #disclaimertext, #disclaimerbutton, #answer, #ageappear {
+    font-family: 'Crimson Text', serif;
+}
+
 #kitty {
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row: 1 / 2;
 }
 
 #kibble {
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row: 2 / 3;
 }
 
 #calc {
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row: 3 / 4;
 }
 
 #multipliersection {
@@ -176,7 +164,6 @@ h1 {
     margin: auto;
     align-items: center;
     justify-items: center;
-    font-family: 'Crimson Text', serif;
     font-size: 15px;
     font-weight: bold;
     overflow-x: hidden;
@@ -194,8 +181,7 @@ h1 {
 
 #weighttype {
     width: 80%;
-    align-self: start ;
-    justify-self: center;
+    align-self: start;
     grid-row: 5 / 6;
     grid-column: 3 / 4;
     display: grid;
@@ -206,22 +192,18 @@ h1 {
 }
 
 #kg {
-    grid-row: 1 / 2;
     grid-column: 1 / 2;
 }
 
 #kglabel {
-    grid-row: 1 / 2;
     grid-column: 2 / 3;
 }
 
 #lb {
-    grid-row: 1 / 2;
     grid-column: 3 / 4;
 }
 
 #lblabel {
-    grid-row: 1 / 2;
     grid-column: 4 / 5;
 }
 
@@ -267,8 +249,6 @@ h1 {
 }
 
 select {
-    font-family: 'Crimson Text', serif;
-    border: 3px solid #3C7A89;
     border-radius: 5px;
 }
 
@@ -277,17 +257,26 @@ select {
 }
 
 #button {
-    font-family: 'Crimson Text', serif;
     font-size: 20px;
     color: white;
     background-color: #3C7A89;
-    border: 3px solid black;
-    border-radius: 25px;
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 10%;
     padding-right: 10%;
     margin-bottom: 20px;
+}
+
+.disclaimer, #answer, #ageappear {
+    border: 5px solid black;
+}
+
+select, #button, #disclaimerbutton {
+    border: 3px solid black;
+}
+
+#button, .disclaimer, .disclaimertext, #disclaimerbutton, #answer, #formappear, #ageappear {
+    border-radius: 25px;
 }
 
 .disclaimer {
@@ -297,21 +286,15 @@ select {
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
-    background-color: #950952;
-    border: 5px solid black;
-    border-radius: 25px;
     transform: scale(0, 0);
-    animation: form 1s forwards;
+    animation: grow 1s forwards;
     animation-delay: 3s;
 }
 
 #disclaimertext {
     text-align: center;
     font-weight: bold;
-    background-color: #950952;
     color: white;
-    border-radius: 25px;
-    font-family: 'Crimson Text', serif;
     line-height: 200%;
     margin: 20px;
 }
@@ -319,12 +302,9 @@ select {
 #disclaimerbutton {
     margin: auto;
     margin-bottom: 20px;
-    font-family: 'Crimson Text', serif;
     font-size: 20px;
     color: white;
     background-color: #3C7A89;
-    border: 3px solid black;
-    border-radius: 25px;
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 10%;
@@ -336,13 +316,9 @@ select {
     margin: auto;
     margin-top: 10px;
     text-align: center;
-    font-family: 'Crimson Text', serif;
     font-size: 20px;
     padding: 10px;
     color: white;
-    background-color: #950952;
-    border: 5px solid black;
-    border-radius: 25px;
 }
 
 .parent {
@@ -353,36 +329,48 @@ select {
     overflow-x: hidden;
 }
 
-@keyframes form {
-    from {
-        transform: scale(0, 0);
-    }
-    to {
-        transform: scale(1, 1);
-    }
-}
-
 #removedisclaimer {
     animation: disappear 1s forwards;
-}
-
-@keyframes disappear {
-    from {
-        display: block;
-        transform: scale(1, 1);
-    }
-    to {
-        transform: scale(0, 0);
-        display: none;
-}
 }
 
 #formappear {
     display: block;
     border: 0px solid black;
-    border-radius: 25px;
     animation: formappear 2s forwards;
     animation-delay: 1s;
+}
+
+.agelink {
+    display: none;
+}
+
+#ageappear {
+    display: block;
+    background-color:#D5A021;
+    margin: auto;
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    animation: fadein 2s forwards;
+}
+
+a:visited {
+    color: #3C7A89;
+}
+
+a:link {
+    color: #3C7A89;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        transform: scale(1, 1);
+    }
 }
 
 @keyframes formappear {
@@ -398,26 +386,18 @@ select {
 }
 }
 
-.agelink {
-    display: none;
+@keyframes disappear {
+    from {
+        display: block;
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(0, 0);
+        display: none;
+}
 }
 
-#ageappear {
-    display: block;
-    background-color:#D5A021;
-    margin: auto;
-    margin-top: 10px;
-    width: 80%;
-    text-align: center;
-    font-family: 'Crimson Text', serif;
-    font-size: 20px;
-    padding: 10px;
-    border: 5px solid black;
-    border-radius: 25px;
-    animation: ageappear 2s forwards;
-}
-
-@keyframes ageappear {
+@keyframes fadein {
     from {
         opacity: 0%;
     }
@@ -426,10 +406,11 @@ select {
     }
 }
 
-a:visited {
-    color: #3C7A89;
-}
-
-a:link {
-    color: #3C7A89;
+@keyframes slideleft {
+    from {
+        transform: translateX(500px);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
