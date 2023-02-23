@@ -18,7 +18,7 @@
                 <h1 id="calc">Calc</h1>
                 <div id="shape4"></div>
             </div>
-            <div id="parent">
+            <div class="parent">
                 <div id="multipliersection">
                     <label for="age" id="agequestion">How old is your kitty?</label>
                     <select id="ageanswer">
@@ -55,16 +55,18 @@
                     <script src="scripts/calcCalories.js"></script>
                     <script src="scripts/displayResults.js"></script>
                     <script src="scripts/dropdowns.js"></script>
+                    <script src="scripts/ageLink.js"></script>
                     </div>
                     <div id="calculatebutton">
-                        <button type="button" id="button" onclick="setAge(), setNeuter(), setHealth(), setMultiplier(), calcRER(), calcCalories(), confirmResults()">Calculate</button>
+                        <button type="button" id="button" onclick="setAge(), setNeuter(), setHealth(), setMultiplier(), calcRER(), calcCalories(), confirmResults(), ageLink()">Calculate</button>
                     </div>
                 </div>
             </div>
         </div>
+        <p class="agelink">Want to know your kitty's age in human years? Find out at <a href="https://ashaskincodes.neocities.org/">KittyCalc</a></p>
         <div class="disclaimer">
             <p id="disclaimertext">Please note that I built this website so I could practise using JavaScript to juggle calculations with options and numbers.<br><br>DO NOT use this information to manage your kitty's diet - a dialogue with your vet is the only way to ensure your pets are getting the correct quantities of food and nutritional breakdown to ensure a healthy, safe diet and a long, happy life.<br><br></p>
-            <button type="button" id="disclaimerbutton" onclick="removeDisclaimer() formAppear()">I Agree</button>
+            <button type="button" id="disclaimerbutton" onclick="removeDisclaimer(), formAppear()">I Agree</button>
             <script src="scripts/removeDisclaimer.js"></script>
             <script src="scripts/formAppear.js"></script>
         </div>

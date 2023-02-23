@@ -49,6 +49,10 @@ body {
     width: 100%;
 }
 
+#grandparent {
+    overflow-x: hidden
+}
+
 @keyframes appear {
     from {
         transform: translateX(500px);
@@ -162,6 +166,7 @@ h1 {
     justify-items: center;
     font-family: 'Crimson Text', serif;
     font-size: 14px;
+    overflow-x: hidden;
 }
 
 #weightquestion {
@@ -311,22 +316,22 @@ select {
 }
 
 #answer {
-    width: 80%;
+    width: 60%;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 40px;
     text-align: center;
     font-family: 'Crimson Text', serif;
-    font-size: 20px;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    font-size: 30px;
+    padding: 20px;
     color: white;
     background-color: #950952;
     border: 3px solid black;
     border-radius: 5px;
 }
 
-#parent {
-    display: none;
+.parent {
+    height: 0;
+    overflow-x: hidden;
 }
 
 @keyframes form {
@@ -353,6 +358,51 @@ select {
 }
 }
 
-.formappear {
-    display: initial;
+#formappear {
+    display: block;
+    animation: formappear 2s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes formappear {
+    from {
+        height: 0;
+        transform: translateX(500px);
+    }
+    to {
+        height: 100%;
+        transform: translateX(0);
+}
+}
+
+.agelink {
+    display: none;
+}
+
+#ageappear {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+    width: 60%;
+    font-family: 'Crimson Text', serif;
+    font-size: 24px;
+    animation: ageappear 4s forwards;
+}
+
+@keyframes ageappear {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+a:visited {
+    color: #3C7A89;
+}
+
+a:link {
+    color: #3C7A89;
 }

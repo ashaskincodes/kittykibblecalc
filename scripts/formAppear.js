@@ -1,4 +1,4 @@
 function formAppear() {
-    var form = document.getElementById('parent');
-    form.className = "formappear";
+    var questions = document.querySelector(".parent");
+    questions.setAttribute("id", "formappear");
 }
