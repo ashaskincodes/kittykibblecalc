@@ -270,7 +270,42 @@ select {
 }
 
 #disclaimer {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #950952;
+    border: 5px solid black;
+    border-radius: 25px;
+    transform: scale(0, 0);
+    animation: form 1s forwards;
+    animation-delay: 3s;
+}
+
+#disclaimertext {
+    text-align: center;
+    background-color: #950952;
+    color: white;
+    border-radius: 25px;
+    font-family: 'Crimson Text', serif;
+    line-height: 200%;
+    margin: 20px;
+}
+
+#disclaimerbutton {
+    margin: auto;
+    margin-bottom: 20px;
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    color: white;
+    background-color: #3C7A89;
+    border-radius: 5px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #answer {
@@ -286,4 +321,21 @@ select {
     background-color: #950952;
     border: 3px solid black;
     border-radius: 5px;
+}
+
+#parent {
+    display: none;
+}
+
+@keyframes form {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+.formappear {
+    display: initial;
 }
