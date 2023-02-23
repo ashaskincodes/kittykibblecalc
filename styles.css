@@ -41,9 +41,6 @@ table {
 	border-spacing: 0;
 }
 
-* {
-}
-
 body {
     width: 100%;
 }
@@ -51,6 +48,7 @@ body {
 #background {
     z-index: -1;
     position: absolute;
+    width: 100%;
     top: 140px;
     opacity: 0%;
     animation: backgroundappear 5s forwards;
@@ -67,7 +65,7 @@ body {
 }
 
 #grandparent {
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
 @keyframes appear {
@@ -416,7 +414,7 @@ select {
     padding: 10px;
     border: 5px solid black;
     border-radius: 25px;
-    animation: ageappear 4s forwards;
+    animation: ageappear 2s forwards;
 }
 
 @keyframes ageappear {
