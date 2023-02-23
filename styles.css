@@ -316,13 +316,13 @@ select {
 }
 
 #answer {
-    width: 60%;
+    width: 70%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
     font-family: 'Crimson Text', serif;
-    font-size: 30px;
-    padding: 20px;
+    font-size: 20px;
+    padding: 10px;
     color: white;
     background-color: #950952;
     border: 3px solid black;
@@ -382,11 +382,11 @@ select {
 #ageappear {
     display: block;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
     width: 60%;
     font-family: 'Crimson Text', serif;
-    font-size: 24px;
+    font-size: 20px;
     animation: ageappear 4s forwards;
 }
 
