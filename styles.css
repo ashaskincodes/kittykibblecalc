@@ -53,7 +53,7 @@ body {
     overflow: hidden;
 }
 
-#background {
+#backgroundmobile {
     z-index: -1;
     position: absolute;
     width: 100%;
@@ -61,6 +61,10 @@ body {
     opacity: 0%;
     animation: fadein 5s forwards;
     animation-delay: 3s;
+}
+
+#backgrounddesktop {
+    display: none;
 }
 
 #phonegridlogo {
@@ -412,5 +416,102 @@ a:link {
     }
     to {
         transform: translateX(0);
+    }
+}
+
+@media screen and (min-device-width: 1024px) {
+    #phonegridlogo {
+        grid-template-columns: 4fr 4fr 1fr;
+    }
+
+    body {
+        overflow: initial;
+    }
+
+    #backgroundmobile {
+        display: none;
+    }
+
+    #backgrounddesktop {
+        display: initial;
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        top: 140px;
+        opacity: 0%;
+        animation: fadein 5s forwards;
+        animation-delay: 3s;
+    }
+
+    #shape2 {
+        grid-row: 2 / 3;
+        width: 98%;
+        background-color: #3C7A89;
+    }
+
+    .disclaimer {
+        margin: auto;
+        width: 60%;
+        margin-top: 100px;
+    }
+    
+    #disclaimertext {
+        font-weight: initial;
+        line-height: initial;
+    }
+
+    @keyframes slideleft {
+        from {
+            transform: translateX(1500px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    #multipliersection {
+        font-size: 16px;
+        font-weight: initial;
+        line-height: 10px;
+    }
+
+    select, select option {
+        font-size: 16px;
+    }
+
+    .parent {
+        width: 50%;
+        background-color: #D5A021;
+        margin: auto;
+        height: 0;
+        overflow-x: hidden;
+    }
+
+    #answer {
+        width: 49%;
+    }
+
+    #ageappear {
+        width: 49%;
+    }
+
+    #formappear {
+        display: block;
+        border: 0px solid black;
+        animation: formappear 2s forwards;
+        animation-delay: 1s;
+    }
+
+    @keyframes formappear {
+        from {
+            height: 0;
+            border: 5px solid black;
+            transform: translateX(1500px);
+        }
+        to {
+            height: 100%;
+            border: 5px solid black;
+            transform: translateX(0);
+    }
     }
 }
