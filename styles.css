@@ -59,7 +59,7 @@ body {
     width: 100%;
     top: 140px;
     opacity: 0%;
-    animation: fadein 5s forwards;
+    animation: fadeinbackground 5s forwards;
     animation-delay: 3s;
 }
 
@@ -360,11 +360,7 @@ select, #button, #disclaimerbutton {
     animation: fadein 2s forwards;
 }
 
-a:visited {
-    color: #3C7A89;
-}
-
-a:link {
+a:visited, a:link {
     color: #3C7A89;
 }
 
@@ -410,6 +406,15 @@ a:link {
     }
 }
 
+@keyframes fadeinbackground {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 50%;
+    }
+}
+
 @keyframes slideleft {
     from {
         transform: translateX(500px);
@@ -439,7 +444,7 @@ a:link {
         width: 100%;
         top: 140px;
         opacity: 0%;
-        animation: fadein 5s forwards;
+        animation: fadeinbackground 5s forwards;
         animation-delay: 3s;
     }
 
